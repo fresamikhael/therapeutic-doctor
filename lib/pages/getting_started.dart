@@ -61,7 +61,9 @@ class GettingStartedPage extends StatelessWidget {
         height: 55,
         margin: EdgeInsets.only(top: 29),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/sign-in');
+          },
           style: TextButton.styleFrom(
               backgroundColor: Colors.green,
               shape: RoundedRectangleBorder(
@@ -69,16 +71,14 @@ class GettingStartedPage extends StatelessWidget {
           child: Text(
             'Mulai',
             style: GoogleFonts.poppins(
-              fontSize: 16,
-              fontWeight: FontWeight.w300,
-              color: Colors.white
-            ),
+                fontSize: 16, fontWeight: FontWeight.w300, color: Colors.white),
           ),
         ),
       );
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         margin: EdgeInsets.symmetric(
           horizontal: 35,
